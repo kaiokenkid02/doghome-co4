@@ -1,0 +1,256 @@
+:root {
+    --primary-text: white;
+    --mau-den: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 1.5;
+}
+
+header {
+    background-image: url(./img/1.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: var(--primary-text);
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+    position: relative;
+}
+
+#label-list>label {
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#label-list {
+    margin-bottom: 40px;
+}
+
+#logo {
+    font-weight: bold;
+    float: left;
+    margin: 20px 48px;
+    font-size: 32px;
+}
+
+nav {
+    float: right;
+    margin-top: 12px;
+    margin-right: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: var(--primary-text);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 16px;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-text);
+    color: var(--mau-den);
+    border-radius: 6px;
+}
+
+.active {
+    background-color: var(--primary-text);
+    color: var(--mau-den);
+    border-radius: 6px;
+}
+
+#main-header {
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+#main-header h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-top: 32px;
+    margin-bottom: 0;
+}
+
+#main-header .Read-more {
+    border: 2px solid var(--primary-text);
+    border-radius: 4px;
+    padding: 12px 8px;
+}
+
+#main-header p {
+    margin-bottom: 70px;
+    letter-spacing: 1px;
+}
+
+#label-list {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-size: 40px;
+    transform: translate(-50%, 0%);
+    margin-bottom: 0;
+}
+
+
+/*section welcome*/
+
+#welcome {
+    text-align: center;
+    margin: 0 20vh;
+}
+
+#welcome h2 {
+    font-size: 48px;
+    margin-top: 98px;
+    text-transform: capitalize;
+}
+
+.lorem {
+    opacity: 0.6;
+    padding-bottom: 32px;
+    padding-top: 12px;
+}
+
+#welcome img {
+    width: 100%;
+}
+
+
+/* what we do*/
+
+#what-we-do {
+    text-align: center;
+    padding: 0 15vh;
+    margin-top: 140px;
+}
+
+#what-we-do h2 {
+    font-size: 50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-items {
+    flex: 25%;
+    padding: 16px 20px 32px 0;
+}
+
+.flex-items img {
+    border-radius: 50%;
+}
+
+.flex-items p {
+    opacity: 0.6;
+}
+
+.flex-items h3 {
+    text-transform: capitalize;
+}
+
+
+/*statistics*/
+
+#statistics {
+    text-align: center;
+    background-image: url(./img/bg.jpg);
+    background-position: bottom;
+    margin-top: 90px;
+    color: var(--primary-text);
+    height: 420px;
+}
+
+#statistics h2 {
+    font-size: 50px;
+    padding: 70px 0 20px 0;
+}
+
+.flex-items .opacity-1 {
+    opacity: 1;
+    margin: 0;
+}
+
+.flex-items .big-number {
+    font-size: 66px;
+    margin: 0;
+    padding-bottom: -10px;
+}
+
+.statistics-margin-left-right {
+    margin: 0 70px;
+}
+
+
+/* pet services
+*/
+
+#services {
+    padding: 100px 20vh;
+    display: flex;
+    background-color: #f0f3fe;
+}
+
+#services h2 {
+    font-size: 50px;
+    margin: 0;
+}
+
+#services p {
+    opacity: 0.6;
+    line-height: 2.5;
+}
+
+#services .left {
+    flex: 50%;
+}
+
+#services .services-left {
+    flex-basis: 15%;
+    margin-right: 100px;
+}
+
+#services .services-right {}
+
+.flex-item-two {
+    flex: 45%;
+    margin: 0px 8px 16px 8px;
+    text-align: center;
+    padding: 20px 40px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.icon {
+    color: #ff9900;
+    font-size: 3em;
+    margin-top: 20px;
+}
+
+#services h3 {
+    font-size: 32px;
+    font-weight: 400;
+}
