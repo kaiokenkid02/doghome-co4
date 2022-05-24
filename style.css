@@ -14,9 +14,17 @@ body {
     line-height: 1.5;
 }
 
-h2 {
-    font-size: 48px;
+h1 {
+    font-size: 50px;
     text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0 auto;
 }
 
 .opacity-06 {
@@ -32,6 +40,15 @@ h3 a {
     color: var(--mau-den);
 }
 
+nav input,
+nav label {
+    display: none;
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+    margin: 1rem 1rem 0 0;
+    border-radius: 6px;
+}
+
 header {
     background-image: url(./img/1.jpg);
     background-repeat: no-repeat;
@@ -41,6 +58,29 @@ header {
     background-position: center;
     overflow: auto;
     position: relative;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--mau-den);
+    min-width: 107px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 2.3rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: grid;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--primary-text);
 }
 
 #label-list>label {
@@ -73,7 +113,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: contents;
 }
 
 nav ul li a {
@@ -108,6 +148,7 @@ nav ul li a:hover {
     border: 2px solid var(--primary-text);
     border-radius: 4px;
     padding: 12px 8px;
+    cursor: pointer;
 }
 
 #main-header p {
@@ -130,16 +171,17 @@ nav ul li a:hover {
 #welcome {
     text-align: center;
     margin: 0 20vh;
-}
-
-.lorem {
-    opacity: 0.6;
-    padding-bottom: 32px;
-    padding-top: 12px;
+    padding-top: 6rem;
 }
 
 #welcome img {
     width: 100%;
+}
+
+#welcome p {
+    opacity: 0.6;
+    margin: 50px 10%;
+    text-align: center;
 }
 
 
@@ -148,7 +190,7 @@ nav ul li a:hover {
 #what-we-do {
     text-align: center;
     padding: 0 15vh;
-    margin-top: 140px;
+    margin: 140px 0;
 }
 
 .flex-container {
@@ -163,6 +205,11 @@ nav ul li a:hover {
 
 .flex-items img {
     border-radius: 50%;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.flex-items img:hover {
+    transform: rotateY(180deg);
 }
 
 .flex-items p {
@@ -183,7 +230,6 @@ nav ul li a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     color: var(--primary-text);
-    height: 420px;
     padding: 50px;
 }
 
@@ -230,10 +276,16 @@ nav ul li a:hover {
     flex: 45%;
     margin: 0px 8px 16px 8px;
     text-align: center;
-    padding: 20px 40px;
+    padding: 0 40px;
     border: 1px solid white;
     background-color: white;
     border-radius: 4px;
+    transition: all 0.5s ease-in-out 0s;
+    box-shadow: 7px 7px 10px 0 rgb(76 110 245 / 10%);
+}
+
+.flex-item-services:hover {
+    background: var(--mau-cam);
 }
 
 .icon {
@@ -267,12 +319,17 @@ nav ul li a:hover {
 }
 
 .flex-items-testimonials {
-    width: 25%;
+    width: 28%;
+    justify-content: flex-end;
+    text-align: center;
+    flex-wrap: wrap;
+    display: flex;
 }
 
 #testimonials .flex-items-testimonials img {
     border-radius: 50%;
     padding: 16px;
+    margin: auto;
 }
 
 #testimonials .flex-items-testimonials p {
@@ -281,7 +338,6 @@ nav ul li a:hover {
 
 #testimonials .flex-items-testimonials h3 {
     text-align: center;
-    margin-left: 120px;
     color: var(--mau-cam);
 }
 
@@ -459,4 +515,149 @@ footer {
 .footer-item .ft-title p {
     color: white;
     font-size: 20px;
+}
+
+
+/*media 992px*/
+
+@media only screen and (max-width: 1024px) {
+    .flex-items {
+        flex: 50%;
+    }
+    #services {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+    #services .services-left {
+        margin-right: 2rem;
+    }
+    .services-left h2 {
+        font-size: 40px;
+    }
+    .services-right {
+        padding-top: 4rem;
+    }
+    #testimonials .flex-container-testimonials {
+        margin: 0;
+    }
+    #our-blog {
+        padding: 6rem 0;
+    }
+    #contact-us {
+        padding: 6rem 0 0 0;
+    }
+    .flex-container-contact {
+        margin: 1rem 3rem;
+    }
+    .footer-row .footer-item {
+        padding: 0;
+    }
+    .footer-row {
+        justify-content: space-around;
+    }
+    .footer-row .footer-item {
+        width: 16%;
+    }
+    .footer-row .footer-item:last-child {
+        width: 35%;
+    }
+    nav label {
+        display: block !important;
+    }
+    nav label:hover {
+        background-color: var(--primary-text);
+        color: var(--mau-den);
+    }
+    nav ul {
+        display: none;
+    }
+    nav input[type="checkbox"]:checked~ul {
+        display: grid;
+        padding-left: 0;
+    }
+    nav>ul {
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        z-index: 1;
+    }
+}
+
+
+/*576*/
+
+@media only screen and (max-width: 576px) {
+    #main-header {
+        width: 80vh;
+    }
+    #main-header h1 {
+        font-size: 1.3rem;
+    }
+    #welcome {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    #what-we-do {
+        padding-left: 5vh;
+        padding-right: 5vh;
+        margin-bottom: 1rem;
+    }
+    .flex-items {
+        flex: 100%;
+    }
+    #services {
+        display: inline-block;
+        padding-bottom: 2rem;
+    }
+    .flex-item-services {
+        flex: 100%;
+    }
+    #services h3 {
+        margin: 0.5rem;
+    }
+    #services p {
+        margin: 0.5rem 0 1.5rem 0;
+    }
+    #our-blog {
+        padding-bottom: 2rem;
+    }
+    .flex-container-testimonials {
+        flex-wrap: wrap;
+    }
+    .flex-items-testimonials {
+        flex: 100%;
+        display: inline-block;
+    }
+    .flex-container-blog {
+        flex-wrap: wrap;
+    }
+    .flex-items-blog {
+        width: 100%;
+        margin: 1rem 3rem;
+    }
+    .flex-container-contact {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .flex-items-contact {
+        flex: 100%;
+    }
+    .right {
+        margin: 1rem;
+    }
+    .footer-row {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .footer-row .footer-item {
+        width: 45%;
+    }
+    .footer-row .footer-item:last-child {
+        width: 90%;
+    }
 }

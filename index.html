@@ -14,17 +14,26 @@
     <header>
         <div id="logo">Dog Home</div>
         <nav>
+            <label for="toggle">Menu</label>
+            <input type="checkbox" name="" id="toggle" />
             <ul>
                 <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">Statistics</a></li>
-                <li><a href="#">services</a></li>
-                <li><a href="#">Dropdown</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#statistics">Statistics</a></li>
+                <li><a href="#services">services</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                    <div class="dropdown-content">
+                        <a href="#blog">blog</a>
+                        <a href="#what-we-do">what we do</a>
+                        <a href="#testimonials">testimonials</a>
+                    </div>
+                </li>
+                <li><a href="#contact-us">Contact Us</a></li>
             </ul>
         </nav>
 
         <div id="main-header">
-            <h2>How to train your dog</h2>
+            <h1>How to train your dog</h1>
             <p>
                 Sed ut perspiciatis unde omnis iste natus error sit<br /> acntium doemque laudantium, totam rem aperiam eaque ipsa<br /> quae ab illo.
             </p>
@@ -39,8 +48,8 @@
     </header>
     <section id="welcome">
         <h2>welcome to our website</h2>
-        <p class="lorem">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna<br /> aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
         <img src="./img/about2.jpg" alt="about2" />
     </section>
